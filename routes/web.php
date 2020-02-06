@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/sigava', 'AppController@index')->name("main");
+Route::get('/sigava/minor', 'AppController@minor')->name("minor");
