@@ -26,8 +26,3 @@ Route::group(['prefix' => 'sigava', 'middleware' => ['auth']], function () {
     Route::get('/', 'AppController@index')->name("main");
     Route::get('/minor', 'AppController@minor')->name("minor");
 });
-
-
-Route::get('/registrar', function(){
-    return view('register.create');
-} );
