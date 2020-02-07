@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'sigava', 'middleware' => ['auth']], function () {
+    Route::get('/', 'AppController@index')->name("main");
+    Route::get('/minor', 'AppController@minor')->name("minor");
+});
