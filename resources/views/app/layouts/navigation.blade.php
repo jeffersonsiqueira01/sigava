@@ -12,7 +12,11 @@
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
                         <li><a href="#">Perfil</a></li>
-                        <li><a href="#">Sair</a></li>
+                        <li><a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                             {{ __('Sair') }}
+     </a></li>
                     </ul>
                 </div>
                 <div class="logo-element">
