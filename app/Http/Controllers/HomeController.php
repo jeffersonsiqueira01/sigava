@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -24,5 +24,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function cadastro($tipo)
+    {
+            return view('registro.create', compact('tipo'));
+    }
+
+    public function dashboard(){
+        return view('app.dashboard.index');
     }
 }
