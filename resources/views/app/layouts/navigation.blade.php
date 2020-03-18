@@ -23,15 +23,25 @@
                     SIGAVA
                 </div>
             </li>
-            <li class="active">
-                <a href="{{ url('/sigava') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span></a>
+            <li class="@yield('home')">
+                <a href="{{ url('/sigava') }}"><i class="fa fa-tachometer"></i> <span class="nav-label">Home</span></a>
             </li>
             <li class="">
-                <a href="{{ url('/sigava') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Calcular</span></a>
+                <a href="{{ url('/sigava') }}"><i class="fa fa-bullseye"></i> <span class="nav-label">Calcular</span></a>
+            </li>
+            <li class="@yield('imoveis')">
+                <a href="{{ url('/sigava/imovel') }}"><i class="fa fa-database"></i> <span class="nav-label">Imóveis</span></a>
+            </li>
+            <li class="@yield('contato')">
+                <a href="{{ url('/sigava/contato') }}"><i class="fa fa-address-book-o"></i> <span class="nav-label">Contatos</span> </a>
+            </li>
+            <li class="@yield('parametros')">
+                <a href="{{ url('/sigava/parametros') }}"><i class="fa fa-sliders"></i> <span class="nav-label">Parâmetros</span> </a>
             </li>
             <li class="">
-                <a href="{{ url('/sigava/minor') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Histórico</span> </a>
+                <a href="{{ url('/sigava/minor') }}"><i class="fa fa-history"></i> <span class="nav-label">Histórico</span> </a>
             </li>
+            
         </ul>
 
     </div>

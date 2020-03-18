@@ -8,6 +8,11 @@ class Endereco extends Model
 {
     protected $table = 'addresses';
     protected $fillable = [
-        'city_id', 'name', 'street', 'number', 'postal_code', 'complement', 'district', 'lat', 'long', 'status',
+        'cidade', 'uf', 'rua', 'name', 'numero', 'complemento', 'bairro', 'cep', 'ibge', 'status',
     ];
+
+    public function property()
+    {
+        return $this->belongsTo('App\Property', 'address_id', 'id');
+    }
 }
